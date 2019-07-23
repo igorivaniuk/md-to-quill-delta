@@ -128,7 +128,7 @@ declare module 'brotli-size' {
 
   function brotliSize(input: Input): Promise<number>
 
-  export = brotliSize
+  export default brotliSize
 }
 
 declare module 'pretty-bytes' {
