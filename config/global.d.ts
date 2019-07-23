@@ -147,3 +147,15 @@ declare module 'pretty-bytes' {
 
   export = prettyBytes
 }
+
+declare module 'is-word-character' {
+  function word(input: string): boolean
+
+  export = word
+}
+
+declare module 'is-whitespace-character' {
+  function whitespace(input: string): boolean
+
+  export = whitespace
+}

@@ -10,7 +10,6 @@
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
     "sourceMap": true,
     "stripInternal": true,
     "declaration": true,
@@ -19,12 +18,7 @@
     "outDir": "dist/esm5",
     "resolveJsonModule": true,
     "importHelpers": true,
-    "plugins": [
-      {
-        "name": "typescript-tslint-plugin",
-        "alwaysShowRuleFailuresAsWarnings": false
-      }
-    ]
+    "plugins": []
   },
   "include": [
     "./src"

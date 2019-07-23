@@ -17,7 +17,7 @@
     "interface-name": {
       "options": "never-prefix"
     },
-    "no-unsafe-any": true,
+    "no-unsafe-any": false,
     // core lint rules
     "ban": {
       "options": [
@@ -68,7 +68,7 @@
     },
     "switch-default": true,
     // tslint:recommended overrides
-    "no-any": true,
+    "no-any": false,
     "member-access": {
       "options": [
         "no-public"
@@ -88,5 +88,6 @@
     }
   },
   // apply the same rules for any JS if allowJS is gonna be used
-  "jsRules": true
+  "jsRules": true,
+  "no-console": false
 }
