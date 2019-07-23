@@ -20,7 +20,7 @@
   "author": "Igor Ivaniuk <igorivaniuk@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=8.5",
+    "node": ">=12",
     "npm": ">=6.0",
     "yarn": "^1.0"
   },
