@@ -1,5 +1,4 @@
 import { trim, whitespace, wordCharacter } from '../utils'
-
 function locate(value: string, fromIndex: number) {
   return value.indexOf('_', fromIndex)
 }

@@ -44,7 +44,6 @@ export default function strongCustom(
   while (index < length) {
     prev = character
     character = value.charAt(index)
-
     if (character === marker && (!pedantic || !whitespace(prev))) {
       character = value.charAt(index + 1)
 
