@@ -8,6 +8,7 @@ import replace from 'rollup-plugin-replace'
 import { terser } from 'rollup-plugin-terser'
 import { getIfUtils, removeEmpty } from 'webpack-config-utils'
 import builtins from 'rollup-plugin-node-builtins'
+import globals from 'rollup-plugin-node-globals'
 
 import pkg from '../package.json'
 const {
@@ -51,6 +52,7 @@ const external = Object.keys(pkg.peerDependencies) || []
  *  @type {Plugin[]}
  */
 const plugins = /** @type {Plugin[]} */ ([
+  globals(),
   builtins(),
 
   // Allow json resolution
