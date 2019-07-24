@@ -98,7 +98,7 @@ const UMDconfig = {
     sourcemap: true,
   },
   plugins: removeEmpty(
-    /** @type {Plugin[]} */ ([...plugins, ifProduction(uglify())])
+    /** @type {Plugin[]} */ ([...plugins, ifProduction(terser())])
   ),
 }
 
@@ -119,7 +119,21 @@ const FESMconfig = {
     },
   ],
   plugins: removeEmpty(
-    /** @type {Plugin[]} */ ([...plugins, ifProduction(terser())])
+    /** @type {Plugin[]} */ ([
+      ...plugins,
+      ifProduction(
+        terser({
+          mangle: {
+            eval: true,
+            keep_classnames: false,
+            keep_fnames: false,
+            properties: {
+              builtins: true,
+            },
+          },
+        })
+      ),
+    ])
   ),
 }
 
