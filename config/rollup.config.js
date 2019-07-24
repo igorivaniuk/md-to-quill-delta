@@ -4,9 +4,10 @@ import nodeResolve from 'rollup-plugin-node-resolve'
 import json from 'rollup-plugin-json'
 import commonjs from 'rollup-plugin-commonjs'
 import replace from 'rollup-plugin-replace'
-import { uglify } from 'rollup-plugin-uglify'
+// import { uglify } from 'rollup-plugin-uglify'
 import { terser } from 'rollup-plugin-terser'
 import { getIfUtils, removeEmpty } from 'webpack-config-utils'
+import builtins from 'rollup-plugin-node-builtins'
 
 import pkg from '../package.json'
 const {
@@ -50,6 +51,8 @@ const external = Object.keys(pkg.peerDependencies) || []
  *  @type {Plugin[]}
  */
 const plugins = /** @type {Plugin[]} */ ([
+  builtins(),
+
   // Allow json resolution
   json(),
 
