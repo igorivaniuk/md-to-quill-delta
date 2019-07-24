@@ -1,6 +1,6 @@
 {
   "name": "@ivaniuk/md-to-quill-delta",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Convert markdown to quill delta ops",
   "keywords": [
     "md",
