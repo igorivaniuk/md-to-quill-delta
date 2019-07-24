@@ -1,9 +1,19 @@
-import Op from 'quill-delta/dist/Op'
 // tslint:disable-next-line: match-default-export-name
 import markdown from 'remark-parse'
 import unified from 'unified'
 import emphasisCustom from './parsers/emphasis'
 import strongCustom from './parsers/strong'
+
+interface AttributeMap {
+  [key: string]: any
+}
+
+interface Op {
+  insert?: string | object
+  delete?: number
+  retain?: number
+  attributes?: AttributeMap
+}
 
 export function markdownToQuillDelta(md: string): Op[] {
   markdown.Parser.prototype.blockMethods = [
